@@ -152,4 +152,12 @@ public class WyrazenieTest {
         String result = instance.wykonaj();
         assertEquals(expResult, result);
     }
+
+    @Test
+    public void testAdriana_2() {
+        Wyrazenie instance = new Wyrazenie("a-a");
+        String expResult = "0";
+        String result = instance.wykonaj();
+        assertEquals(expResult, result);
+    }
 }
