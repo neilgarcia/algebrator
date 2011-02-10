@@ -1,0 +1,1 @@
+Jak tekstowo przechowujemy funkcje potęga, pierwiastek itp. ?
