@@ -155,8 +155,52 @@ public class WyrazenieTest {
 
     @Test
     public void testAdriana_2() {
-        Wyrazenie instance = new Wyrazenie("a-a");
+        Wyrazenie instance = new Wyrazenie("2^1");
+        String expResult = "2";
+        String result = instance.wykonaj();
+        assertEquals(expResult, result);
+    }
+     @Test
+    public void testAdriana_3() {
+        Wyrazenie instance = new Wyrazenie("0^3");
+        String expResult = "1";
+        String result = instance.wykonaj();
+        assertEquals(expResult, result);
+    }
+
+     @Test
+    public void testAdriana_4() {
+        Wyrazenie instance = new Wyrazenie("a-a+2a");
+        String expResult = "2a";
+        String result = instance.wykonaj();
+        assertEquals(expResult, result);
+    }
+      @Test
+    public void testAdriana_5() {
+        Wyrazenie instance = new Wyrazenie("0^(a-a)");
         String expResult = "0";
+        String result = instance.wykonaj();
+        assertEquals(expResult, result);
+    }
+       @Test
+    public void testAdriana_6() {
+        Wyrazenie instance = new Wyrazenie("(a-a)*0");
+        String expResult = "0";
+        String result = instance.wykonaj();
+        assertEquals(expResult, result);
+    }
+        @Test
+    public void testAdriana_7() {
+        Wyrazenie instance = new Wyrazenie("23a/23f/34a/23f");
+        String expResult = "1/(782)^2";
+        String result = instance.wykonaj();
+        assertEquals(expResult, result);
+    }
+
+        @Test
+    public void testAdriana_8() {
+        Wyrazenie instance = new Wyrazenie("(s+e)^2");
+        String expResult = "s^2+2se+e^2";
         String result = instance.wykonaj();
         assertEquals(expResult, result);
     }
